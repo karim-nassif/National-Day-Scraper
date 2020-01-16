@@ -8,7 +8,7 @@ def strip_non_ascii(string):
     return ''.join(stripped)
 
 d = datetime.datetime.today();
-day = '17'
+day = d.strftime('%d')
 month = d.strftime('%B')
 
 url = "https://nationaltoday.com/"+month.lower()+"-"+day+"-holidays"
