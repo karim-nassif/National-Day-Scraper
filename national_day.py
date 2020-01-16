@@ -3,7 +3,7 @@ import requests
 import datetime
 
 d = datetime.datetime.today();
-day = '1'
+day = d.strftime('%d')
 month = d.strftime('%B')
 
 url = "https://nationaltoday.com/"+month.lower()+"-"+day+"-holidays"
