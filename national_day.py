@@ -8,10 +8,9 @@ def strip_non_ascii(string):
     return ''.join(stripped)
 
 d = datetime.datetime.today();
-day = d.strftime('%d')
-month = d.strftime('%B')
+day = d.strftime('%B-%d')
 
-url = "https://nationaltoday.com/"+month.lower()+"-"+day+"-holidays"
+url = "https://nationaltoday.com/"+day.lower()+"-holidays"
 page = requests.get(url)
 
 soup = BeautifulSoup(page.content, 'html.parser')
